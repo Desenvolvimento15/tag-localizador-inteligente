@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" href="https://i02.appmifile.com/i18n/fonts/MiSansLatin/index.css">
 <link href="https://www.mi.com/sgp/spps_files/product/2.61.16/pc_v4/xiaomi-tag/css/public.chunk.css" rel="stylesheet">
-<link href="https://www.mi.com/sgp/spps_files/product/2.61.16/pc_v4/xiaomi-tag/css/main.css" rel="stylesheet">
+<link href="./main.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
@@ -358,38 +358,29 @@ data-fid="1:200" role="" data-fetch-priority="high">
         const layerA = document.querySelector(".screen_06__card_image_layer--a");
         const layerB = document.querySelector(".screen_06__card_image_layer--b");
 
-        // Estado inicial
         gsap.set(layerB, { opacity: 0, visibility: "hidden" });
 
-        // Timeline principal com tela travada
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
                 start: "top top",
-                end: "+=130%", // controla duração do bloqueio
+                end: "+=30%",
                 scrub: true,
                 pin: true,
+                pinSpacing: false, // 🔥 resolve o espaço branco
                 anticipatePin: 1
             }
         });
 
-        /* ===============================
-           TROCA DE IMAGENS (efeito Xiaomi)
-        =============================== */
-
         tl.to(layerA, {
             opacity: 0,
-            y: -100,
-            ease: "none",
-            duration: 1
+            ease: "none"
         });
 
         tl.to(layerB, {
             opacity: 1,
             visibility: "inherit",
-            y: 0,
-            ease: "none",
-            duration: 1
+            ease: "none"
         }, "<");
 
     });
