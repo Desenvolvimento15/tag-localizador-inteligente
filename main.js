@@ -1,7 +1,7 @@
 $(".slick-end").slick({
   lazyLoad: "ondemand",
   arrows: false,
-  dots: false,
+  dots: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
