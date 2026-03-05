@@ -11,7 +11,7 @@ $(".slick-end").slick({
 $(".slick-end-2").slick({
   lazyLoad: "ondemand",
   arrows: false,
-  dots: false,
+  dots: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
