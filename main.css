@@ -1,6 +1,11 @@
-
-
-
+html {
+  height: 100%;
+  margin: 0 auto;
+}
+body {
+  background-color: #f5f5f5;
+  height: 100%;
+}
 html,
 body,
 ul,
@@ -4022,7 +4027,7 @@ body .button-close {
   width: 0.9375rem;
 }
 .screen_02 .screen_02__card_content_e .screen_02__ksp_text {
-  width: 1.3rem;
+  width: 1.09375rem;
 }
 .screen_03 {
   background-position: top;
